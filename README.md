@@ -1,6 +1,6 @@
 # WeathersSpike
 
-**TODO: Add description**
+Get weather information with [OpenWeatherMap](https://openweathermap.org).
 
 ## Installation
 
