@@ -82,28 +82,4 @@ defmodule WeatherSpike.FiveDay do
       ]
     end
   end
-
-  @doc """
-  Decode a JSON string of 5 day / 3 hour forecast data.
-  """
-  def decode(source) do
-    source
-    |> Poison.decode(
-      as: %WeatherSpike.FiveDay{
-        city: %WeatherSpike.FiveDay.City{
-          coord: %WeatherSpike.FiveDay.City.Coord{}
-        },
-        list: [
-          %WeatherSpike.FiveDay.Item{
-            main: %WeatherSpike.FiveDay.Item.Main{},
-            weather: [%WeatherSpike.FiveDay.Item.Weather{}],
-            clouds: %WeatherSpike.FiveDay.Item.Clouds{},
-            wind: %WeatherSpike.FiveDay.Item.Wind{},
-            rain: %WeatherSpike.FiveDay.Item.Volume{},
-            snow: %WeatherSpike.FiveDay.Item.Volume{}
-          }
-        ]
-      }
-    )
-  end
 end
